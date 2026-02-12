@@ -288,7 +288,7 @@ function Question({step,value,onChange,onNext,onBack,idx,answers}) {
         <div>
           <input type="email" value={v} onChange={e=>setV(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&v.includes("@")){onChange(v);onNext()}}}
             placeholder="your@email.com" style={{width:"100%",padding:"14px 18px",boxSizing:"border-box",background:"rgba(30,41,59,0.4)",border:"1px solid rgba(51,65,85,0.4)",borderRadius:10,color:"#f1f5f9",fontSize:15,...cs,outline:"none"}}/>
-          <button onClick={async()=>{if(v.includes("@")){onChange(v);const roi=calcROI({...answers,email:v});fetch("/api/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:v,answers:{...answers,email:v},roi})}).catch(()=>{});onNext()}}} disabled={!v.includes("@")}
+          <button onClick={async()=>{if(v.includes("@")){onChange(v);const roi=calcROI({...answers,email:v});const apiBase=window.ROI_API_BASE||"";fetch(`${apiBase}/api/lead`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:v,answers:{...answers,email:v},roi})}).catch(()=>{});onNext()}}} disabled={!v.includes("@")}
             style={{width:"100%",marginTop:14,padding:"14px 28px",border:"none",borderRadius:10,cursor:v.includes("@")?"pointer":"not-allowed",background:v.includes("@")?"linear-gradient(135deg,#f97316,#ea580c)":"rgba(30,41,59,0.5)",color:"#fff",fontSize:16,fontWeight:600,...cs,opacity:v.includes("@")?1:0.4}}>
             Generate My ROI Report
           </button>
@@ -415,7 +415,8 @@ function Results({answers,roi,initiallyUnlocked}) {
               <button onClick={async()=>{
                 setGenerating(true);
                 try{
-                  const res=await fetch("/api/checkout",{
+                  const apiBase=window.ROI_API_BASE||"";
+                  const res=await fetch(`${apiBase}/api/checkout`,{
                     method:"POST",
                     headers:{"Content-Type":"application/json"},
                     body:JSON.stringify({email:answers.email,answers,roi})
@@ -467,7 +468,8 @@ export default function App() {
     const params=new URLSearchParams(window.location.search);
     const sessionId=params.get("session_id");
     if(sessionId){
-      fetch(`/api/verify/${sessionId}`)
+      const apiBase=window.ROI_API_BASE||"";
+      fetch(`${apiBase}/api/verify/${sessionId}`)
         .then(r=>r.json())
         .then(data=>{
           if(data.paid&&data.answers){
