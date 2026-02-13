@@ -190,14 +190,14 @@ function Landing({onStart}) {
   return (
     <div style={{opacity:a?1:0,transform:a?"translateY(0)":"translateY(20px)",transition:"all 0.6s ease"}}>
       <div style={{textAlign:"center",marginBottom:48}}>
-        <div style={{...cm,fontSize:11,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:12}}>Free ROI Calculator</div>
+        <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:12}}>Free ROI Calculator</div>
         <h1 style={{...cf,fontSize:38,color:"#f1f5f9",lineHeight:1.2,margin:"0 0 16px"}}>
-          Your missed calls are<br/><span style={{color:"#f97316"}}>someone else's revenue</span>
+          Your missed calls are<br/><span style={{color:"#10b981"}}>someone else's revenue</span>
         </h1>
         <p style={{...cs,maxWidth:480,margin:"0 auto 32px",fontSize:16,color:"#94a3b8",lineHeight:1.6}}>
           Answer 8 questions. See exactly how much revenue your business loses every month from unanswered calls.
         </p>
-        <button onClick={onStart} style={{padding:"14px 28px",border:"none",borderRadius:10,cursor:"pointer",background:"linear-gradient(135deg,#f97316,#ea580c)",color:"#fff",fontSize:16,fontWeight:600,...cs}}>
+        <button onClick={onStart} style={{padding:"14px 28px",border:"none",borderRadius:10,cursor:"pointer",background:"linear-gradient(135deg,#10b981,#059669)",color:"#fff",fontSize:16,fontWeight:600,...cs}}>
           Calculate My Lost Revenue
         </button>
         <p style={{...cm,fontSize:11,color:"#475569",marginTop:12}}>60 seconds. No credit card.</p>
@@ -206,19 +206,19 @@ function Landing({onStart}) {
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:14,marginBottom:48}}>
         {[{s:"85%",l:"of voicemail callers never call back"},{s:"30-40%",l:"of service calls go unanswered"},{s:"$4,200",l:"avg missed inbound lead value"}].map((x,i)=>(
           <div key={i} style={{padding:18,background:"rgba(30,41,59,0.4)",border:"1px solid rgba(51,65,85,0.3)",borderRadius:12,textAlign:"center"}}>
-            <div style={{...cf,fontSize:26,color:"#f97316",marginBottom:4}}>{x.s}</div>
+            <div style={{...cf,fontSize:26,color:"#10b981",marginBottom:4}}>{x.s}</div>
             <div style={{...cs,fontSize:11,color:"#94a3b8",lineHeight:1.4}}>{x.l}</div>
           </div>
         ))}
       </div>
 
       <div style={{padding:24,background:"rgba(30,41,59,0.3)",border:"1px solid rgba(51,65,85,0.3)",borderRadius:14,marginBottom:48}}>
-        <div style={{...cm,fontSize:11,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:18}}>Your free report includes</div>
+        <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:18}}>Your free report includes</div>
         {[{t:"Revenue Loss Analysis",d:"Exact dollar amount lost monthly from missed and after-hours calls"},
           {t:"Industry Benchmarks",d:"How your numbers compare to top performers in your vertical"},
           {t:"ROI Projection",d:"What an AI voice agent recovers and how fast you'd see payback"}].map((x,i)=>(
           <div key={i} style={{display:"flex",gap:12,marginBottom:i<2?14:0}}>
-            <div style={{width:26,height:26,borderRadius:7,flexShrink:0,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.2)",display:"flex",alignItems:"center",justifyContent:"center",color:"#f97316",fontSize:13,fontWeight:700,marginTop:2}}>{i+1}</div>
+            <div style={{width:26,height:26,borderRadius:7,flexShrink:0,background:"rgba(16,185,129,0.1)",border:"1px solid rgba(16,185,129,0.2)",display:"flex",alignItems:"center",justifyContent:"center",color:"#10b981",fontSize:13,fontWeight:700,marginTop:2}}>{i+1}</div>
             <div>
               <div style={{...cs,fontWeight:600,color:"#e2e8f0",fontSize:14,marginBottom:2}}>{x.t}</div>
               <div style={{...cs,fontSize:13,color:"#94a3b8"}}>{x.d}</div>
@@ -226,10 +226,10 @@ function Landing({onStart}) {
           </div>
         ))}
         <div style={{marginTop:20,paddingTop:20,borderTop:"1px solid rgba(51,65,85,0.3)"}}>
-          <div style={{...cm,fontSize:11,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:14}}>Upgrade for $29 (optional)</div>
+          <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:14}}>Upgrade for $29 (optional)</div>
           {["4-week implementation roadmap for YOUR industry","Vendor comparison with real costs","Negotiation scripts for phone contracts","Case study from a business like yours","Full cost breakdown + ROI timeline"].map((x,i)=>(
             <div key={i} style={{display:"flex",gap:10,marginBottom:7}}>
-              <span style={{color:"#f97316",fontSize:14,flexShrink:0}}>+</span>
+              <span style={{color:"#10b981",fontSize:14,flexShrink:0}}>+</span>
               <span style={{...cs,fontSize:13,color:"#cbd5e1"}}>{x}</span>
             </div>
           ))}
@@ -237,13 +237,13 @@ function Landing({onStart}) {
       </div>
 
       <div style={{marginBottom:48}}>
-        <div style={{...cm,fontSize:11,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:20,textAlign:"center"}}>Built by the team behind</div>
+        <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:20,textAlign:"center"}}>Built by the team behind</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
           {[{c:"HometownCap",r:"200+ daily AI calls",m:"18-day payback"},{c:"Wayne Conn Plumbing",r:"100% call capture",m:"+$5K/mo revenue"},
             {c:"Adleg Marketing",r:"97% time reduction",m:"$200K+ new revenue"},{c:"Beaver Pumice",r:"Zero lost tickets",m:"5-week payback"}].map((x,i)=>(
             <div key={i} style={{padding:14,background:"rgba(15,23,42,0.6)",border:"1px solid rgba(51,65,85,0.3)",borderRadius:10}}>
               <div style={{...cs,fontWeight:600,color:"#e2e8f0",fontSize:13,marginBottom:3}}>{x.c}</div>
-              <div style={{...cs,fontSize:12,color:"#f97316",marginBottom:2}}>{x.r}</div>
+              <div style={{...cs,fontSize:12,color:"#10b981",marginBottom:2}}>{x.r}</div>
               <div style={{...cm,fontSize:11,color:"#64748b"}}>{x.m}</div>
             </div>
           ))}
@@ -251,7 +251,7 @@ function Landing({onStart}) {
       </div>
 
       <div style={{textAlign:"center"}}>
-        <button onClick={onStart} style={{padding:"14px 28px",border:"none",borderRadius:10,cursor:"pointer",background:"linear-gradient(135deg,#f97316,#ea580c)",color:"#fff",fontSize:16,fontWeight:600,...cs}}>
+        <button onClick={onStart} style={{padding:"14px 28px",border:"none",borderRadius:10,cursor:"pointer",background:"linear-gradient(135deg,#10b981,#059669)",color:"#fff",fontSize:16,fontWeight:600,...cs}}>
           Calculate My Lost Revenue
         </button>
       </div>
@@ -275,12 +275,12 @@ function Question({step,value,onChange,onNext,onBack,idx,answers}) {
       <h2 style={{...cf,fontSize:26,color:"#f1f5f9",lineHeight:1.3,marginBottom:step.sub?8:24}}>{step.q}</h2>
       {step.sub&&<p style={{...cs,fontSize:14,color:"#64748b",marginBottom:24}}>{step.sub}</p>}
       {step.showPain&&ind&&(
-        <div style={{padding:"10px 14px",marginBottom:16,borderRadius:8,background:"rgba(249,115,22,0.06)",border:"1px solid rgba(249,115,22,0.15)",...cs,fontSize:12,color:"#94a3b8",lineHeight:1.5}}>{ind.painStats}</div>
+        <div style={{padding:"10px 14px",marginBottom:16,borderRadius:8,background:"rgba(16,185,129,0.06)",border:"1px solid rgba(16,185,129,0.15)",...cs,fontSize:12,color:"#94a3b8",lineHeight:1.5}}>{ind.painStats}</div>
       )}
       {step.type==="select"&&opts&&(
         <div style={{display:"flex",flexDirection:"column",gap:8}}>
           {opts.map(o=>(
-            <button key={o.value} onClick={()=>sel(o.value)} style={{padding:"13px 18px",textAlign:"left",cursor:"pointer",background:v===o.value?"rgba(249,115,22,0.1)":"rgba(30,41,59,0.4)",border:v===o.value?"1px solid rgba(249,115,22,0.35)":"1px solid rgba(51,65,85,0.4)",borderRadius:10,color:v===o.value?"#fb923c":"#cbd5e1",...cs,fontSize:14,fontWeight:500,transition:"all 0.15s ease",outline:"none"}}>{o.label}</button>
+            <button key={o.value} onClick={()=>sel(o.value)} style={{padding:"13px 18px",textAlign:"left",cursor:"pointer",background:v===o.value?"rgba(16,185,129,0.1)":"rgba(30,41,59,0.4)",border:v===o.value?"1px solid rgba(16,185,129,0.35)":"1px solid rgba(51,65,85,0.4)",borderRadius:10,color:v===o.value?"#34d399":"#cbd5e1",...cs,fontSize:14,fontWeight:500,transition:"all 0.15s ease",outline:"none"}}>{o.label}</button>
           ))}
         </div>
       )}
@@ -289,7 +289,7 @@ function Question({step,value,onChange,onNext,onBack,idx,answers}) {
           <input type="email" value={v} onChange={e=>setV(e.target.value)} onKeyDown={e=>{if(e.key==="Enter"&&v.includes("@")){onChange(v);onNext()}}}
             placeholder="your@email.com" style={{width:"100%",padding:"14px 18px",boxSizing:"border-box",background:"rgba(30,41,59,0.4)",border:"1px solid rgba(51,65,85,0.4)",borderRadius:10,color:"#f1f5f9",fontSize:15,...cs,outline:"none"}}/>
           <button onClick={async()=>{if(v.includes("@")){onChange(v);const roi=calcROI({...answers,email:v});const apiBase=window.ROI_API_BASE||"";fetch(`${apiBase}/api/lead`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:v,answers:{...answers,email:v},roi})}).catch(()=>{});onNext()}}} disabled={!v.includes("@")}
-            style={{width:"100%",marginTop:14,padding:"14px 28px",border:"none",borderRadius:10,cursor:v.includes("@")?"pointer":"not-allowed",background:v.includes("@")?"linear-gradient(135deg,#f97316,#ea580c)":"rgba(30,41,59,0.5)",color:"#fff",fontSize:16,fontWeight:600,...cs,opacity:v.includes("@")?1:0.4}}>
+            style={{width:"100%",marginTop:14,padding:"14px 28px",border:"none",borderRadius:10,cursor:v.includes("@")?"pointer":"not-allowed",background:v.includes("@")?"linear-gradient(135deg,#10b981,#059669)":"rgba(30,41,59,0.5)",color:"#fff",fontSize:16,fontWeight:600,...cs,opacity:v.includes("@")?1:0.4}}>
             Generate My ROI Report
           </button>
           <p style={{...cm,fontSize:11,color:"#475569",textAlign:"center",marginTop:10}}>No spam. Unsubscribe anytime.</p>
@@ -312,9 +312,9 @@ function Results({answers,roi,initiallyUnlocked}) {
   const ind=INDUSTRIES[answers.business_type]||INDUSTRIES.other;
 
   const Stat=({label,value,sub,hi,big})=>(
-    <div style={{padding:big?24:18,background:hi?"rgba(249,115,22,0.07)":"rgba(30,41,59,0.35)",border:hi?"1px solid rgba(249,115,22,0.2)":"1px solid rgba(51,65,85,0.25)",borderRadius:12,gridColumn:big?"1/-1":undefined}}>
+    <div style={{padding:big?24:18,background:hi?"rgba(16,185,129,0.07)":"rgba(30,41,59,0.35)",border:hi?"1px solid rgba(16,185,129,0.2)":"1px solid rgba(51,65,85,0.25)",borderRadius:12,gridColumn:big?"1/-1":undefined}}>
       <div style={{...cm,fontSize:10,color:"#64748b",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:5}}>{label}</div>
-      <div style={{...cf,fontSize:big?40:30,color:hi?"#fb923c":"#f1f5f9",lineHeight:1.1}}>{value}</div>
+      <div style={{...cf,fontSize:big?40:30,color:hi?"#34d399":"#f1f5f9",lineHeight:1.1}}>{value}</div>
       {sub&&<div style={{...cs,fontSize:12,color:"#94a3b8",marginTop:3}}>{sub}</div>}
     </div>
   );
@@ -322,9 +322,9 @@ function Results({answers,roi,initiallyUnlocked}) {
   return (
     <div style={{opacity:a?1:0,transform:a?"translateY(0)":"translateY(20px)",transition:"all 0.6s ease"}}>
       <div style={{textAlign:"center",marginBottom:36}}>
-        <div style={{...cm,fontSize:11,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:12}}>Your ROI Analysis</div>
+        <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.12em",marginBottom:12}}>Your ROI Analysis</div>
         <h1 style={{...cf,fontSize:36,color:"#f1f5f9",lineHeight:1.2,margin:0}}>
-          You're losing <span style={{color:"#f97316"}}>{fmt(roi.yearRev)}/year</span> in missed calls
+          You're losing <span style={{color:"#10b981"}}>{fmt(roi.yearRev)}/year</span> in missed calls
         </h1>
         <p style={{...cs,fontSize:15,color:"#94a3b8",marginTop:10,lineHeight:1.5}}>
           {roi.missed.toLocaleString()} calls/mo go unanswered. That's ~{roi.deals} lost deals worth {fmt(roi.monthRev)}.
@@ -347,10 +347,10 @@ function Results({answers,roi,initiallyUnlocked}) {
       )}
 
       <div style={{padding:18,marginBottom:20,borderRadius:12,background:"rgba(15,23,42,0.5)",border:"1px solid rgba(51,65,85,0.3)"}}>
-        <div style={{...cm,fontSize:10,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:8}}>Proof: {ind.label}</div>
+        <div style={{...cm,fontSize:10,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:8}}>Proof: {ind.label}</div>
         <div style={{...cf,fontSize:18,color:"#f1f5f9",marginBottom:4}}>{ind.caseStudy.company}</div>
         <div style={{...cs,fontSize:13,color:"#94a3b8",lineHeight:1.5}}>{ind.caseStudy.result}</div>
-        <div style={{...cm,fontSize:12,color:"#f97316",marginTop:6}}>Payback: {ind.caseStudy.payback}</div>
+        <div style={{...cm,fontSize:12,color:"#10b981",marginTop:6}}>Payback: {ind.caseStudy.payback}</div>
       </div>
 
       {/* PREMIUM GATED CONTENT */}
@@ -361,7 +361,7 @@ function Results({answers,roi,initiallyUnlocked}) {
           {ind.roadmap.map(p=>(
             <div key={p.week} style={{marginBottom:20}}>
               <div style={{display:"flex",gap:10,alignItems:"center",marginBottom:8}}>
-                <div style={{...cm,fontSize:10,color:"#f97316",background:"rgba(249,115,22,0.1)",padding:"3px 8px",borderRadius:5}}>{p.week}</div>
+                <div style={{...cm,fontSize:10,color:"#10b981",background:"rgba(16,185,129,0.1)",padding:"3px 8px",borderRadius:5}}>{p.week}</div>
                 <div style={{...cs,fontSize:14,fontWeight:600,color:"#e2e8f0"}}>{p.title}</div>
               </div>
               {p.items.map((item,j)=>(
@@ -378,12 +378,12 @@ function Results({answers,roi,initiallyUnlocked}) {
             {ind.vendors.map((v,i)=>(
               <div key={i} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:12,background:"rgba(15,23,42,0.4)",borderRadius:8,marginBottom:8}}>
                 <div><div style={{...cs,fontWeight:600,color:"#e2e8f0",fontSize:13}}>{v.name}</div><div style={{...cs,fontSize:11,color:"#64748b"}}>{v.role}</div></div>
-                <div style={{textAlign:"right"}}><div style={{...cm,fontSize:12,color:"#fb923c"}}>{v.cost}</div><div style={{...cs,fontSize:10,color:"#64748b"}}>{v.note}</div></div>
+                <div style={{textAlign:"right"}}><div style={{...cm,fontSize:12,color:"#34d399"}}>{v.cost}</div><div style={{...cs,fontSize:10,color:"#64748b"}}>{v.note}</div></div>
               </div>
             ))}
-            <div style={{marginTop:12,padding:12,borderRadius:8,background:"rgba(249,115,22,0.06)",border:"1px solid rgba(249,115,22,0.15)"}}>
+            <div style={{marginTop:12,padding:12,borderRadius:8,background:"rgba(16,185,129,0.06)",border:"1px solid rgba(16,185,129,0.15)"}}>
               <div style={{...cs,fontSize:12,color:"#cbd5e1",lineHeight:1.5}}>
-                <strong style={{color:"#fb923c"}}>Total est. monthly:</strong> {fmt(roi.agentCost)}/mo to recover {fmt(roi.yearRev)}/year. <strong style={{color:"#4ade80"}}>{roi.roi}% ROI.</strong>
+                <strong style={{color:"#34d399"}}>Total est. monthly:</strong> {fmt(roi.agentCost)}/mo to recover {fmt(roi.yearRev)}/year. <strong style={{color:"#4ade80"}}>{roi.roi}% ROI.</strong>
               </div>
             </div>
           </div>
@@ -393,7 +393,7 @@ function Results({answers,roi,initiallyUnlocked}) {
             {[{label:"If you have an answering service",script:"We're testing an AI system for 30 days. I'd like to pause our contract rather than cancel. If it doesn't perform, we'll be back. Can you freeze with no penalty?"},
               {label:"If you're hiring a receptionist",script:"Before we post this role, I want to test an AI phone system for 30 days. If it handles 80%+ of calls, we redirect that salary budget to revenue activities. If not, we hire."}].map((s,i)=>(
               <div key={i} style={{padding:12,background:"rgba(15,23,42,0.4)",borderRadius:8,marginBottom:8}}>
-                <div style={{...cm,fontSize:10,color:"#f97316",textTransform:"uppercase",marginBottom:6}}>{s.label}</div>
+                <div style={{...cm,fontSize:10,color:"#10b981",textTransform:"uppercase",marginBottom:6}}>{s.label}</div>
                 <div style={{...cs,fontSize:12,color:"#94a3b8",lineHeight:1.5,fontStyle:"italic"}}>"{s.script}"</div>
               </div>
             ))}
@@ -409,7 +409,7 @@ function Results({answers,roi,initiallyUnlocked}) {
               </div>
               {["4-week industry-specific roadmap",`${ind.caseStudy.company} case study`,"Vendor comparison with real costs","Contract negotiation scripts","Cost breakdown + ROI timeline"].map((x,i)=>(
                 <div key={i} style={{...cs,fontSize:12,color:"#cbd5e1",display:"flex",gap:8,marginBottom:4,textAlign:"left"}}>
-                  <span style={{color:"#f97316"}}>✓</span>{x}
+                  <span style={{color:"#10b981"}}>✓</span>{x}
                 </div>
               ))}
               <button onClick={async()=>{
@@ -427,7 +427,7 @@ function Results({answers,roi,initiallyUnlocked}) {
                   console.error(err);
                   setGenerating(false);
                 }
-              }} disabled={generating} style={{marginTop:20,padding:"16px 36px",border:"none",borderRadius:10,cursor:generating?"wait":"pointer",background:"linear-gradient(135deg,#f97316,#ea580c)",color:"#fff",fontSize:17,fontWeight:600,...cs,boxShadow:"0 4px 30px rgba(249,115,22,0.35)",opacity:generating?0.7:1}}>
+              }} disabled={generating} style={{marginTop:20,padding:"16px 36px",border:"none",borderRadius:10,cursor:generating?"wait":"pointer",background:"linear-gradient(135deg,#10b981,#059669)",color:"#fff",fontSize:17,fontWeight:600,...cs,boxShadow:"0 4px 30px rgba(16,185,129,0.35)",opacity:generating?0.7:1}}>
                 {generating?"Processing...":"Get Full Report - $29"}
               </button>
               <div style={{...cm,fontSize:11,color:"#475569",marginTop:10}}>One-time. Instant delivery. No subscription.</div>
@@ -437,14 +437,14 @@ function Results({answers,roi,initiallyUnlocked}) {
       </div>
 
       {/* DONE FOR YOU */}
-      <div style={{padding:24,borderRadius:14,textAlign:"center",background:"linear-gradient(135deg,rgba(249,115,22,0.06),rgba(234,88,12,0.03))",border:"1px solid rgba(249,115,22,0.15)",marginBottom:20}}>
-        <div style={{...cm,fontSize:11,color:"#f97316",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:8}}>Done-For-You</div>
+      <div style={{padding:24,borderRadius:14,textAlign:"center",background:"linear-gradient(135deg,rgba(16,185,129,0.06),rgba(234,88,12,0.03))",border:"1px solid rgba(16,185,129,0.15)",marginBottom:20}}>
+        <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:8}}>Done-For-You</div>
         <h3 style={{...cf,fontSize:22,color:"#f1f5f9",margin:"0 0 8px"}}>Want us to build it for you?</h3>
         <p style={{...cs,fontSize:13,color:"#94a3b8",marginBottom:20,lineHeight:1.5,maxWidth:400,margin:"0 auto 20px"}}>
           Custom AI voice agents for {ind.label.toLowerCase()}. Flat rate. Live in 2-4 weeks. You own everything.
         </p>
         <button onClick={()=>window.open("https://meetings.hubspot.com/resultantai/paper-to-digital","_blank")}
-          style={{padding:"14px 28px",borderRadius:10,cursor:"pointer",background:"transparent",border:"1px solid rgba(249,115,22,0.35)",color:"#fb923c",fontSize:15,fontWeight:600,...cs}}>
+          style={{padding:"14px 28px",borderRadius:10,cursor:"pointer",background:"transparent",border:"1px solid rgba(16,185,129,0.35)",color:"#34d399",fontSize:15,fontWeight:600,...cs}}>
           Book a Free Strategy Call
         </button>
         <div style={{...cm,fontSize:11,color:"#475569",marginTop:10}}>30 min. No pitch deck.</div>
@@ -500,7 +500,7 @@ export default function App() {
                 <span>{Math.round((step+1)/STEPS.length*100)}%</span>
               </div>
               <div style={{width:"100%",height:3,background:"#1e293b",borderRadius:2,overflow:"hidden"}}>
-                <div style={{width:`${(step+1)/STEPS.length*100}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#f97316,#fb923c)",transition:"width 0.5s ease"}}/>
+                <div style={{width:`${(step+1)/STEPS.length*100}%`,height:"100%",borderRadius:2,background:"linear-gradient(90deg,#10b981,#34d399)",transition:"width 0.5s ease"}}/>
               </div>
             </div>
             <Question step={STEPS[step]} value={answers[STEPS[step].id]} onChange={v=>setAnswers(p=>({...p,[STEPS[step].id]:v}))}
