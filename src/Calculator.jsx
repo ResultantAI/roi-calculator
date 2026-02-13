@@ -197,6 +197,11 @@ function Landing({onStart}) {
         <p style={{...cs,maxWidth:480,margin:"0 auto 32px",fontSize:16,color:"#94a3b8",lineHeight:1.6}}>
           Answer 8 questions. See exactly how much revenue your business loses every month from unanswered calls.
         </p>
+        <div style={{marginBottom:24,padding:"16px 20px",background:"rgba(16,185,129,0.08)",border:"1px solid rgba(16,185,129,0.25)",borderRadius:12,maxWidth:480,margin:"0 auto 32px"}}>
+          <div style={{...cm,fontSize:11,color:"#10b981",textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:8}}>Try Our Live AI Demo</div>
+          <a href="tel:6233002294" style={{...cs,fontSize:28,fontWeight:700,color:"#34d399",textDecoration:"none",display:"block",marginBottom:6}}>(623) 300-2294</a>
+          <div style={{...cs,fontSize:13,color:"#cbd5e1"}}>Call right now to hear it in action</div>
+        </div>
         <button onClick={onStart} style={{padding:"14px 28px",border:"none",borderRadius:10,cursor:"pointer",background:"linear-gradient(135deg,#10b981,#059669)",color:"#fff",fontSize:16,fontWeight:600,...cs}}>
           Calculate My Lost Revenue
         </button>
@@ -443,7 +448,7 @@ function Results({answers,roi,initiallyUnlocked}) {
         <p style={{...cs,fontSize:13,color:"#94a3b8",marginBottom:20,lineHeight:1.5,maxWidth:400,margin:"0 auto 20px"}}>
           Custom AI voice agents for {ind.label.toLowerCase()}. Flat rate. Live in 2-4 weeks. You own everything.
         </p>
-        <button onClick={()=>window.open("https://meetings.hubspot.com/resultantai/paper-to-digital","_blank")}
+        <button onClick={()=>window.open("https://meetings.hubspot.com/chris4642","_blank")}
           style={{padding:"14px 28px",borderRadius:10,cursor:"pointer",background:"transparent",border:"1px solid rgba(16,185,129,0.35)",color:"#34d399",fontSize:15,fontWeight:600,...cs}}>
           Book a Free Strategy Call
         </button>
