@@ -1,118 +1,123 @@
 # Voice Agent ROI Calculator
 
-Interactive ROI calculator for ResultantAI's voice agent services. Built with React + Vite + Stripe.
+Interactive ROI calculator that helps service businesses quantify revenue lost from missed calls and calculate the financial impact of implementing AI voice automation.
 
-## Features
+**Live at:** [resultantai.com/voice-roi-calculator](https://resultantai.com/voice-roi-calculator)
 
-- 8-step interactive quiz
-- Real-time ROI calculation
-- Industry-specific recommendations
-- Stripe checkout integration ($29 premium report)
-- Lead capture
-- Success page with premium content unlock
+---
 
-## Tech Stack
+## What It Does
 
-- **Frontend:** React 18, Vite
+The Voice Agent ROI Calculator helps businesses in HVAC, dental, legal, medical, home services, and other high-call-volume industries understand:
+
+- How much revenue they're losing from missed and after-hours calls
+- The financial impact of current no-show rates
+- Payback timeline for implementing AI voice automation
+- Industry-specific implementation roadmaps and vendor costs
+
+### Features
+
+**Free Analysis:**
+- 8-step interactive quiz (60 seconds)
+- Real-time ROI calculations based on industry benchmarks
+- Monthly and annual revenue loss projections
+- Payback period analysis
+- Industry-specific case studies
+
+**Premium Report ($29):**
+- 4-week implementation roadmap for your industry
+- Vendor comparison with real costs (Retell AI, Make.com, CRMs)
+- Contract negotiation scripts
+- Custom cost breakdown and ROI timeline
+
+---
+
+## Industries Supported
+
+- **HVAC / Plumbing / Trades** - Service call management and emergency dispatch
+- **Dental / Medical Practice** - Patient scheduling and no-show reduction
+- **Law Firm / Legal Services** - Intake automation and consultation booking
+- **MCA / Financial Services** - Lead qualification and deal pipeline
+- **Home Services** - Seasonal surge handling and estimate requests
+- **Auto Repair / Dealership** - Appointment booking and parts status
+- **Real Estate / Property Management** - Tenant inquiries and maintenance requests
+
+---
+
+## Technology
+
+- **Frontend:** React 18 with Vite
 - **Backend:** Vercel Serverless Functions
-- **Payment:** Stripe Checkout
-- **Deployment:** Vercel
+- **Payment Processing:** Stripe Checkout
+- **Hosting:** GitHub Pages (frontend) + Vercel (API)
 
-## Local Development
+---
 
-1. Install dependencies:
-```bash
-npm install
-```
+## How It Works
 
-2. Create `.env` file:
-```bash
-cp .env.example .env
-```
+1. **Answer 8 Questions** - Industry type, call volume, job values, close rates, pain points
+2. **Get Free Analysis** - See your monthly revenue loss, payback timeline, and ROI projections
+3. **Optional Upgrade** - Purchase premium report for $29 (one-time) to unlock full implementation roadmap
+4. **Stripe Checkout** - Secure payment processing with instant digital delivery
+5. **Premium Content** - Full roadmap, vendor costs, and negotiation scripts unlocked immediately
 
-3. Add your Stripe keys to `.env`:
-```
-STRIPE_SECRET_KEY=sk_test_...
-BASE_URL=http://localhost:3000
-```
+---
 
-4. Start dev server:
-```bash
-npm run dev
-```
+## Data Sources
 
-Frontend runs on http://localhost:3000
+ROI calculations are based on verified industry data:
 
-## Deployment to Vercel
+- Medical practices: $150K/year average loss from no-shows (source: industry studies)
+- Service businesses: 29-42% of calls missed during business hours (source: multi-practice analysis)
+- Average missed call value: $180-$230 per appointment (source: healthcare benchmarks)
+- No-show rates by specialty: 15-30% across dental, medical, and professional services
 
-### 1. Push to GitHub
+All benchmarks are from 2023-2025 research studies and vendor analyses.
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <your-repo-url>
-git push -u origin main
-```
+---
 
-### 2. Deploy to Vercel
+## Architecture
 
-1. Go to https://vercel.com/new
-2. Import your GitHub repository
-3. Configure environment variables:
-   - `STRIPE_SECRET_KEY` - Your Stripe secret key (sk_live_...)
-   - `STRIPE_WEBHOOK_SECRET` - Stripe webhook secret (whsec_...)
-   - `BASE_URL` - Your production URL (e.g., https://roi.resultantai.com)
-4. Deploy!
+**Frontend (GitHub Pages):**
+- Static React bundle served from `resultantai.com`
+- Lightweight (178KB JS, 56KB gzipped)
+- Mobile-responsive design
 
-### 3. Configure Stripe Webhook
+**Backend API (Vercel):**
+- `/api/lead` - Lead capture for free report
+- `/api/checkout` - Stripe session creation
+- `/api/verify/[sessionId]` - Payment verification
+- `/api/webhook` - Stripe webhook handler
 
-After deployment, add webhook endpoint in Stripe Dashboard:
+**Integration:**
+- Frontend calls backend via configurable API base URL
+- CORS-enabled for cross-origin requests
+- HIPAA-compliant architecture (encrypted call handling, BAA available)
 
-1. Go to: https://dashboard.stripe.com/webhooks
-2. Click "Add endpoint"
-3. Enter URL: `https://your-domain.vercel.app/api/webhook`
-4. Select events: `checkout.session.completed`
-5. Copy webhook secret and add to Vercel env vars as `STRIPE_WEBHOOK_SECRET`
-6. Redeploy
+---
 
-## Environment Variables
+## Open Source
 
-Required in production:
+This calculator is built by [ResultantAI](https://resultantai.com) to help service businesses understand the financial impact of missed revenue opportunities.
 
-```
-STRIPE_SECRET_KEY=sk_live_51...
-STRIPE_WEBHOOK_SECRET=whsec_...
-BASE_URL=https://roi.resultantai.com
-```
+**Contributing:**
+- Report issues or suggest improvements via GitHub Issues
+- Industry-specific data improvements welcome (with verified sources)
 
-## Stripe Configuration
+---
 
-- **Product ID:** `prod_TxmF9h23Zrp39i`
-- **Price ID:** `price_1SzqgXGfTp4ABj0BuyQTx8UQ`
-- **Amount:** $29 one-time payment
+## License
 
-Success URL: `{BASE_URL}/?session_id={CHECKOUT_SESSION_ID}`
-Cancel URL: `{BASE_URL}/?canceled=true`
+MIT License - See LICENSE file for details
 
-## API Endpoints
+---
 
-- `POST /api/lead` - Capture free lead email
-- `POST /api/checkout` - Create Stripe checkout session
-- `GET /api/verify/[sessionId]` - Verify payment and restore state
-- `POST /api/webhook` - Stripe webhook handler
+## Contact
 
-## Custom Domain (Optional)
+**ResultantAI**
+Revenue systems for service businesses.
+Built with AI. Run by humans.
 
-To use `roi.resultantai.com`:
-
-1. In Vercel project settings → Domains
-2. Add `roi.resultantai.com`
-3. Follow DNS setup instructions
-4. Update `BASE_URL` env var
-
-## Testing Stripe Integration
-
-Use test card: `4242 4242 4242 4242`
-Exp: Any future date
-CVC: Any 3 digits
+- Website: [resultantai.com](https://resultantai.com)
+- Calculator: [resultantai.com/voice-roi-calculator](https://resultantai.com/voice-roi-calculator)
+- Book a Demo: [meetings.hubspot.com/resultantai](https://meetings.hubspot.com/resultantai/paper-to-digital)
